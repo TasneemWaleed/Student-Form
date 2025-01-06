@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Student Form Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application for managing student data. Users can input student details such as name, age, email, class, and year. Submitted data is displayed in a table format.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User-friendly form for inputting student information:
+  - Full Name
+  - Age
+  - Email
+  - Class
+  - Year
+- Displays the entered data in a dynamic table.
 
-## Expanding the ESLint configuration
+## How to Use the Project
+- You will see a form with the following fields:
+  - Full Name: Enter the student's full name (e.g., "John Doe").
+  - Age: Enter the student's age in numbers (e.g., "20").
+  - Email: Enter the student's email address (e.g., "john.doe@example.com").
+  - Class: Enter the student's class (e.g., "A", "B", or any class identifier).
+  - Year: Enter the year of the student (e.g., "2023").
+  - After filling in all the fields, click the Submit button.
+- The entered details will appear in the table above the form, organized in rows.
+You can repeat the process to add more students.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
